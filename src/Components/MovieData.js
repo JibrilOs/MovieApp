@@ -30,8 +30,6 @@ function MovieData(props) {
       style={{
         width: "100%",
         display: "inline-block",
-
-        height: "159.5vw",
       }}
     >
       {moviedb.map((movie, id) => (
@@ -44,7 +42,8 @@ function MovieData(props) {
             paddingLeft: "5px",
             paddingTop: "10px",
             paddingRight: "3px",
-            height: "auto",
+          
+            
           }}
         />
       ))}
