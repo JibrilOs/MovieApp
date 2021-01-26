@@ -6,7 +6,7 @@ function Video(props) {
   const [movies, setMovies] = useState(getMovies());
   return (
     <div>
-      <Table hover striped bordered>
+      <Table hover striped bordered className="container">
         <thead>
           <tr>
             <th>Title</th>
@@ -23,18 +23,20 @@ function Video(props) {
               <td>{movie.genre.name}</td>
               <td>{movie.numberInStock}</td>
               <td>{movie.dailyRentalRate}</td>
-              <button
-                className="btn btn-danger mt-2 ml-2"
-                onClick={() => {
-                  const moviesdb = movies;
-                  const filtered = moviesdb.filter(
-                    (moviedb) => movie._id !== moviedb._id
-                  );
-                  return setMovies(filtered);
-                }}
-              >
-                Delete
-              </button>
+              <td>
+                <button
+                  className="btn btn-danger"
+                  onClick={() => {
+                    const moviesdb = movies;
+                    const filtered = moviesdb.filter(
+                      (moviedb) => movie._id !== moviedb._id
+                    );
+                    return setMovies(filtered);
+                  }}
+                >
+                  Delete
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>
