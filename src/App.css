@@ -10,7 +10,9 @@ box-sizing: border-box;
 background: rgba(92, 73, 73, 0.103);
 padding-top: 1px;
 margin-top: 10px;
-height:354vh;
+height:auto;   
+ padding-bottom: 17px;
+
 
 
 }
