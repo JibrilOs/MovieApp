@@ -1,8 +1,9 @@
 # example netlify.toml
 [build]
+base = "video/"
   command = "yarn run build"
   functions = "functions"
-  publish = "build"
+  publish = "video/build/"
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.
