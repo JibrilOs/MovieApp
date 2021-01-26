@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+
 import axios from "axios";
 
 function MovieData(props) {
   const [moviedb, setMoviedb] = useState([]);
-  const [moviedb2, setMoviedb2] = useState([]);
+ 
   let p1 = 1;
   let p2 = 2;
   const urlp1 = `https://api.themoviedb.org/3/movie/now_playing?api_key=97780349323b9eee89666852289d1a44&language=en-US&page=${p1}`;
@@ -21,34 +21,33 @@ function MovieData(props) {
       return console.log(err);
     }
   };
+  // eslint-disable-next-line
   useEffect(() => GetMoviedata(), []);
   const imgUrl = `http://image.tmdb.org/t/p/original/`;
   return (
-    <div style={{ width: "100%" }}>
-      <div
-        className="moviecont"
-        style={{
-          width: "100%",
-          display: "inline-block",
+    <div
+      className="moviecont"
+      style={{
+        width: "100%",
+        display: "inline-block",
 
-          height: "192.5vw",
-        }}
-      >
-        {moviedb.map((movie, id) => (
-          <img
-            key={id}
-            src={`${imgUrl}${movie.poster_path}`}
-            alt="pic"
-            style={{
-              width: "220.6px",
-              paddingLeft: "5px",
-              paddingTop: "10px",
-              paddingRight: "3px",
-              height: "auto",
-            }}
-          />
-        ))}
-      </div>
+        height: "159.5vw",
+      }}
+    >
+      {moviedb.map((movie, id) => (
+        <img
+          key={id}
+          src={`${imgUrl}${movie.poster_path}`}
+          alt="pic"
+          style={{
+            width: "220.6px",
+            paddingLeft: "5px",
+            paddingTop: "10px",
+            paddingRight: "3px",
+            height: "auto",
+          }}
+        />
+      ))}
     </div>
   );
 }
