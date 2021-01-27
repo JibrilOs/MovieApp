@@ -1,0 +1,62 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+$breakpoint1:1200px;
+$breakpoint2:1023px;
+$breakpoint3:767px;
+$breakpoint4:480px;
+@media (max-width: $breakpoint1) {
+
+}
+
+
+@media (max-width: $breakpoint2) {
+  .moviecont{
+     
+     
+
+      .img{
+          
+      }
+  }
+}
+@media (max-width: $breakpoint3) {
+  .moviecont{
+       background: rgb(17, 0, 255);
+     
+
+      .img{
+          
+      }
+  }
+}
+@media (max-width: $breakpoint4) {
+    .moviecont{
+      background: rgb(238, 255, 0);
+      width:100%;
+     
+      transform: translate(8%,0);
+
+      .img{
+         
+          
+       
+      }
+  }
+}
+@media (max-width: 177px) {
+    
+    .moviecont{
+      background: rgb(117, 121, 67);
+      width:220%;
+          padding-right: 5px;
+    padding-left: 5px;
+    margin-left:-11.5%;
+    
+
+      .img{
+         
+          
+          width:550% !important;
+      }
+  }
+}
