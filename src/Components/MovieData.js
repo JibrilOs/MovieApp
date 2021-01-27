@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Image from "react-bootstrap/Image";
 
 import axios from "axios";
 
@@ -33,7 +34,9 @@ function MovieData(props) {
       }}
     >
       {moviedb.map((movie, id) => (
-        <img
+        <Image
+          fluid
+          thumbnail
           key={id}
           src={`${imgUrl}${movie.poster_path}`}
           alt="pic"
@@ -42,8 +45,6 @@ function MovieData(props) {
             paddingLeft: "5px",
             paddingTop: "10px",
             paddingRight: "3px",
-          
-            
           }}
         />
       ))}
