@@ -31,18 +31,23 @@ $breakpoint4:480px;
 }
 @media (max-width: $breakpoint4) {
     .moviecont{
-      background: rgb(238, 255, 0);
-      width:100%;
-     
-      transform: translate(8%,0);
+      background: rgb(223, 219, 16);
+      width:109.3%;
+          padding-right: 5px;
+    padding-left: 5.5px;
+   overflow-x: hidden;
+    margin-left:-0.6%;
+    
 
       .img{
          
-          
-       
+          margin-top:3.5px;
+          width:100% !important;
+          overflow-x: hidden;
       }
   }
-}
+  }
+
 @media (max-width: 177px) {
     
     .moviecont{
